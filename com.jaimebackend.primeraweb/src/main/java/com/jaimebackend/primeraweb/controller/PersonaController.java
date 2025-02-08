@@ -30,11 +30,11 @@ public class PersonaController {
     @GetMapping("/nueva")
     public String mostrarFormularioDeNuevaPersona(Model model){
       model.addAttribute("persona", new Persona());
-      model.addAttribute("accion","/persona/nueva");
+      model.addAttribute("accion","/personas/nueva");
         return"formulario";
     }
 
-    @PostMapping
+    @PostMapping("/nueva")
     public String guarsarNuevaPersona(@ModelAttribute Persona persona){
         personaService.crearPersona(persona);
         return "redirect:/personas";

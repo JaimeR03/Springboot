@@ -8,10 +8,10 @@
 <h1>Formulario de Personas</h1>
 <form th:object="${persona}" th:action="${accion}" method="post">
 
-    <label>Nombre: <imput type="text" th:field="*{nombre}"/> </label><br/>
-    <label>Nombre: <imput type="number" th:field="*{edad}"/> </label><br/>
+    <label>Nombre: <input type="text" th:field="*{nombre}"/> </label><br/>
+    <label>Edad: <input type="number" th:field="*{edad}"/> </label><br/>
 
-<button type ="submit">Guardar</button>
+    <button type ="submit">Guardar</button>
 </form>
 <a href="personas">Volver al listado de personas </a>
 </body>
