@@ -6,6 +6,8 @@ import com.jaimebackend.primeraweb.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -23,5 +25,18 @@ public class PersonaController {
      List<Persona> personas = personaService.obtenerTodas();
      model.addAttribute("personasLista", personas);
      return "listar";
+    }
+
+    @GetMapping("/nueva")
+    public String mostrarFormularioDeNuevaPersona(Model model){
+      model.addAttribute("persona", new Persona());
+      model.addAttribute("accion","/persona/nueva");
+        return"formulario";
+    }
+
+    @PostMapping
+    public String guarsarNuevaPersona(@ModelAttribute Persona persona){
+        personaService.crearPersona(persona);
+        return "redirect:/personas";
     }
 }
