@@ -3,12 +3,11 @@ import com.jaimebackend.primeraweb.entities.Persona;
 import com.jaimebackend.primeraweb.repository.PersonaRepository;
 import com.jaimebackend.primeraweb.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
 @SpringBootApplication
-public class PrimeraWebSpringbootApplication implements CommandLineRunner {
+public class PrimeraWebSpringbootApplication  {
 
 	@Autowired
 	private PersonaService personaService;
@@ -20,7 +19,7 @@ public class PrimeraWebSpringbootApplication implements CommandLineRunner {
 	}
 
 
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 		personaService.crearPersona(new Persona(5L, "Jose",21));
 		personaService.crearPersona(new Persona(6L, "martin",21));
@@ -33,6 +32,6 @@ public class PrimeraWebSpringbootApplication implements CommandLineRunner {
 	//mostramos las personas
 		List<Persona> personas = personaService.obtenerTodas();
 		personas.forEach(persona -> System.out.println("Nombre de la persona "+ persona.getNombre()));
-
+*/
 	}
-}
+
