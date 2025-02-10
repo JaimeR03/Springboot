@@ -54,4 +54,11 @@ public class PersonaController {
         return "redirect:/personas";
 
     }
+    @GetMapping("/eliminar/{id}")
+    public String eliminarPersona(@PathVariable Long id){
+        personaService.eliminarPersona(id);
+        return "redirect:/personas";
+    }
+
+
 }
