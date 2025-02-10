@@ -23,7 +23,7 @@
         <td th:text="${persona.edad}">
         </td>
         <td>
-        <a>Editar </a>
+        <a th:href="@{/personas/editar/{id}(id=${persona.id})}">Editar </a>
         <a>Eliminar</a>
     </td>
     </tr>
