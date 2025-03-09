@@ -17,7 +17,7 @@ public class User {
 
     @Size(min = 3,max = 50)
     private String nombre;
-
+//jaime
     @NotBlank
     @Email(message = "Ingrese el correo en formarto email")
     private String email;
