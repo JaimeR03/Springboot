@@ -19,8 +19,10 @@ public class PersonaController {
     // la clase model se utiliza para transferir objetos del controller a la vista
     @GetMapping
     public String listarPersonas(Model model){
+        int totalPersonas = personaService.contarPersonas();
         List<Persona> personas = personaService.obtenerTodas();
         model.addAttribute("personasLista", personas);
+        //model.addAttribute("totalPersonas", totalPersonas);
         return "listar";
     }
 
@@ -59,6 +61,8 @@ public class PersonaController {
         personaService.eliminarPersona(id);
         return "redirect:/personas";
     }
+
+
 
 
 }

@@ -8,7 +8,10 @@
 
 <h1>Listado de personas</h1>
 
-<table>
+<!-- Mostrar el total de personas -->
+<h3>Total de personas registradas: <span th:text="${totalPersonas}"></span></h3>
+
+<table border="1">
     <tr>
         <th>ID</th>
         <th>Nombre</th>
@@ -16,19 +19,17 @@
         <th>Acciones</th>
     </tr>
     <tr th:each="persona: ${personasLista}">
-        <td th:text="${persona.id}">
-        </td>
-        <td th:text="${persona.nombre}">
-        </td>
-        <td th:text="${persona.edad}">
-        </td>
+        <td th:text="${persona.id}"></td>
+        <td th:text="${persona.nombre}"></td>
+        <td th:text="${persona.edad}"></td>
         <td>
-        <a th:href="@{/personas/editar/{id}(id=${persona.id})}">Editar </a>
-        <a th:href="@{/personas/eliminar/{id}(id=${persona.id})}">Eliminar</a>
-    </td>
+            <a th:href="@{/personas/editar/{id}(id=${persona.id})}">Editar</a>
+            <a th:href="@{/personas/eliminar/{id}(id=${persona.id})}">Eliminar</a>
+        </td>
     </tr>
 </table>
 
-<a href="/personas/nueva"> Nueva persona</a>
+<a href="/personas/nueva">Nueva persona</a>
+
 </body>
 </html>

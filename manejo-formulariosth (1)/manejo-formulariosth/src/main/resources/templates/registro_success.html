@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro con éxito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .detail {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .detail span.label {
+            width: 150px;
+            font-weight: bold;
+            color: #555;
+        }
+        .detail span.value {
+            font-weight: normal;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Registro con éxito</h2>
+    <div class="detail">
+        <span class="label">Nombre:</span>
+        <span class="value" th:text="${user.Nombre}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Email:</span>
+        <span class="value" th:text="${user.Email}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Password:</span>
+        <span class="value" th:text="${user.Password}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Género:</span>
+        <span class="value" th:text="${user.Genero}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Profesión:</span>
+        <span class="value" th:text="${user.Profesion}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Matrimonio:</span>
+        <span class="value" th:text="${user.Matrimonio}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Ingreso Anual:</span>
+        <span class="value" th:text="${user.Ingreso}"></span>
+    </div>
+    <div class="detail">
+        <span class="label">Nota:</span>
+        <span class="value" th:text="${user.Nota}"></span>
+    </div>
+</div>
+</body>
+</html>

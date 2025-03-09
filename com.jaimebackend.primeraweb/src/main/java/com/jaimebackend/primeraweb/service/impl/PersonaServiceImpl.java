@@ -46,8 +46,8 @@ private PersonaRepository personaRepository;
     }
 
     @Override
-    public long contarPersonas() {
-        return personaRepository.count();
+    public int contarPersonas() {
+        return Math.toIntExact(personaRepository.count());
     }
 
 
