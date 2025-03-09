@@ -16,5 +16,5 @@ public interface PersonaService {
 
     void eliminarPersona(Long id);
 
-    int contarPersonas();
+    long contarPersonas();
 }
